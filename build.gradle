@@ -11,7 +11,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.FabiMamani:smart-training-controller:-SNAPSHOT'
+
     testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.2")
     testImplementation 'junit:junit:4.13.1'
 }
