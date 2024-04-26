@@ -12,7 +12,7 @@ public class NotificadorDiscovery {
 
     public Set<Notificador> discovery(String path) throws NoSuchFileException {
         Set<Notificador> result = new HashSet<>();
-
+        System.out.println("Clases dentro de directorio:");
         for (File f : new File(path).listFiles()){
             System.out.println(f.getName());
             String className = f.getName();

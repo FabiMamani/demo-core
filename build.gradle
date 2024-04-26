@@ -12,6 +12,7 @@ allprojects {
 
 dependencies {
     implementation 'com.github.FabiMamani:notificadores:-SNAPSHOT'
+    //implementation 'com.github.FabiMamani:notificadores:-a322d4aca0-1'
     testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.2")
     testImplementation 'junit:junit:4.13.1'
 }
