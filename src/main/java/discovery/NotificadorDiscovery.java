@@ -14,13 +14,17 @@ public class NotificadorDiscovery {
         Set<Notificador> result = new HashSet<>();
 
         for (File f : new File(path).listFiles()){
+            System.out.println(f.getName());
             String className = f.getName();
             if ( !className.endsWith(".class")) continue;
 
             //className = getFQDN(className, packageName);
             className = className.substring(0, className.lastIndexOf('.'));
+            if (!packageName.equals("") && !packageName.isEmpty()){
+                className = packageName + "."+className;
+            }
             try {
-                Class c = Class.forName(className);
+                Class<?> c = Class.forName(className);
                 if (Notificador.class.isAssignableFrom(c)){
                     Notificador notifier = (Notificador) c.getDeclaredConstructor().newInstance();
                     result.add(notifier);
